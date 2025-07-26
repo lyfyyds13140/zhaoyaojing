@@ -23,6 +23,10 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
+      - name: Decode keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
+
       - name: Build Release APK
         run: ./gradlew assembleRelease
 
@@ -31,8 +35,3 @@ jobs:
         with:
           name: zhaoyaojing-release-apk
           path: app/build/outputs/apk/release/*.apk
-
-    - name: Decode keystore
-      run: |
-        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
-
