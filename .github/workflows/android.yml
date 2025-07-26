@@ -31,3 +31,8 @@ jobs:
         with:
           name: zhaoyaojing-release-apk
           path: app/build/outputs/apk/release/*.apk
+
+    - name: Decode keystore
+      run: |
+        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > keystore.jks
+
