@@ -17,7 +17,9 @@ public class MainActivity extends AppCompatActivity {
         webview.loadUrl("https://woyyds.com/vue");
         setContentView(webview);
     }
-
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        WebView.setWebContentsDebuggingEnabled(true);
+    }
     @Override
     public void onBackPressed() {
         if (webview.canGoBack()) {
