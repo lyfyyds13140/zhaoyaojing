@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         webview = new WebView(this);
         webview.getSettings().setJavaScriptEnabled(true);
         webview.setWebViewClient(new WebViewClient());
-        webview.loadUrl("https://woyyds.com");
+        webview.loadUrl("https://woyyds.com/vue");
         setContentView(webview);
     }
 
