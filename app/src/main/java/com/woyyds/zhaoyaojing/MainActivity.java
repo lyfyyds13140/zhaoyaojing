@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             WebView.setWebContentsDebuggingEnabled(true);
         }
 
-        webview.loadUrl("https://woyyds.com/vue");
+        webview.loadUrl("https://woyyds.com/rj");
         setContentView(webview);
     }
 
